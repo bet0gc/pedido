@@ -1,8 +1,8 @@
 <html>
 
 <head>
-  <meta meta name="viewport" content= 
-  "width=device-width, user-scalable=no" />
+  <meta meta name="viewport" content= "width=device-width, user-scalable=no" />
+ 
   <!-- Compiled and minified JavaScript -->
   <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
@@ -44,8 +44,24 @@
           <textarea name="endereco" id="endereco" class="materialize-textarea" rows="1"></textarea>
         </div>
         <div id="div-item">
-          <label for="produto">Produto</label>
-          <input id="produto" />
+          <table class="highlight">
+            <tbody>
+              <tr>
+                <td style="width: 70%;">
+                  <label for="produto">Produto</label>
+                  <input id="produto" />
+                </td>
+                <td style="width: 20%;">
+                  <label for="quantidade">Quantidade</label>
+                  <input id="quantidade" type="text" class="quantidade" />
+                </td>
+                <td style="width: 10%;" class="center-align">
+                  <img class="icon-remove" src="img/add.png"/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          
         </div>
         </div>
       </div>
@@ -125,7 +141,7 @@
             ];
 
   $(document).ready(function () {
-    $('select').material_select();
+  
     
 
     setInterval(updateTime, 1000); // Atualiza a cada segundo
@@ -141,6 +157,9 @@
         $('#div-endereco').hide();
       }
     });
+
+    $("input.quantidade").mask("9?9");
+        
 
     $("input.telefone")
         .mask("(99) 9999-9999?9")

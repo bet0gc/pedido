@@ -122,3 +122,12 @@ table td:nth-child(3) {
 .icon-remove{
   width: 1.5em;
 }
+
+.ui-menu .ui-menu-item{
+    background:#ebedeb;
+    border: 1px solid #d7dbd8;
+    padding: 2px;
+    height:2em;
+  font-size:1.5em;
+  max-width: 60%;
+}
